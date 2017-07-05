@@ -14,11 +14,11 @@ declare var jQuery: any;
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements AfterViewInit {
-    
+
     layoutCompact: boolean = false;
 
-    layoutMode: MenuOrientation = MenuOrientation.STATIC;
-        
+    layoutMode: MenuOrientation = MenuOrientation.HORIZONTAL;
+
     rotateMenuButton: boolean;
 
     topbarMenuActive: boolean;
@@ -69,7 +69,7 @@ export class AppComponent implements AfterViewInit {
             this.topbarItemClick = false;
             this.menuClick = false;
         });
-        
+
         setTimeout(() => {
             jQuery(this.layoutMenuScroller).nanoScroller({flash:true});
         }, 10);
@@ -113,13 +113,13 @@ export class AppComponent implements AfterViewInit {
     onTopbarMenuButtonClick(event) {
         this.topbarItemClick = true;
         this.topbarMenuActive = !this.topbarMenuActive;
-        
+
         if(this.overlayMenuActive || this.staticMenuMobileActive) {
             this.rotateMenuButton = false;
             this.overlayMenuActive = false;
             this.staticMenuMobileActive = false;
         }
-        
+
         event.preventDefault();
     }
 
@@ -170,7 +170,7 @@ export class AppComponent implements AfterViewInit {
     ngOnDestroy() {
         if(this.documentClickListener) {
             this.documentClickListener();
-        }  
+        }
 
         jQuery(this.layoutMenuScroller).nanoScroller({flash:true});
     }
