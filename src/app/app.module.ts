@@ -7,6 +7,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AppRoutes} from './app.routes';
 import 'rxjs/add/operator/toPromise';
 
+
 import {AccordionModule} from 'primeng/primeng';
 import {AutoCompleteModule} from 'primeng/primeng';
 import {BreadcrumbModule} from 'primeng/primeng';
@@ -70,7 +71,6 @@ import {ToolbarModule} from 'primeng/primeng';
 import {TooltipModule} from 'primeng/primeng';
 import {TreeModule} from 'primeng/primeng';
 import {TreeTableModule} from 'primeng/primeng';
-
 import {AppComponent}  from './app.component';
 import {AppMenuComponent,AppSubMenu}  from './app.menu.component';
 import {AppTopBar}  from './app.topbar.component';
@@ -89,11 +89,11 @@ import {ChartsDemo} from './demo/view/chartsdemo';
 import {FileDemo} from './demo/view/filedemo';
 import {UtilsDemo} from './demo/view/utilsdemo';
 import {Documentation} from './demo/view/documentation';
-
 import {CarService} from './demo/service/carservice';
 import {CountryService} from './demo/service/countryservice';
 import {EventService} from './demo/service/eventservice';
 import {NodeService} from './demo/service/nodeservice';
+
 
 @NgModule({
     imports: [
@@ -186,12 +186,12 @@ import {NodeService} from './demo/service/nodeservice';
         EmptyDemo,
         FileDemo,
         UtilsDemo,
-        Documentation
+        Documentation,
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},
         CarService,CountryService,EventService,NodeService
     ],
-    bootstrap:[AppComponent]
+    bootstrap:[ AppComponent ]
 })
 export class AppModule { }
