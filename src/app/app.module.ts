@@ -93,6 +93,9 @@ import {CarService} from './demo/service/carservice';
 import {CountryService} from './demo/service/countryservice';
 import {EventService} from './demo/service/eventservice';
 import {NodeService} from './demo/service/nodeservice';
+import { ImgMapComponent } from 'ng2-img-map';
+import {Imgmapcomponent} from './demo/view/imgmapcomponent';
+
 
 
 @NgModule({
@@ -164,7 +167,8 @@ import {NodeService} from './demo/service/nodeservice';
         TooltipModule,
         TreeModule,
         TreeTableModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+
     ],
     declarations: [
         AppComponent,
@@ -187,6 +191,8 @@ import {NodeService} from './demo/service/nodeservice';
         FileDemo,
         UtilsDemo,
         Documentation,
+        Imgmapcomponent,
+        ImgMapComponent,
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},

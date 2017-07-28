@@ -21,7 +21,7 @@ export class AppMenuComponent implements OnInit {
 
     ngOnInit() {
         this.model = [
-            
+
             {
                 label: 'Subir archivo', icon: 'fa fa-fw fa-arrow-circle-o-up', routerLink: ['/file']
             },
@@ -29,7 +29,7 @@ export class AppMenuComponent implements OnInit {
                 label: 'Galería de Imágenes', icon: 'fa fa-fw fa-user-secret', routerLink: ['/misc']
             },
             {
-                label: 'Poner puntos', icon: 'fa fa-fw fa-user-secret', routerLink: ['/misc']
+                label: 'Poner puntos', icon: 'fa fa-fw fa-user-secret', routerLink: ['/imgmap']
             },
 
         ];

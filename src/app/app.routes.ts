@@ -14,7 +14,7 @@ import {ChartsDemo} from './demo/view/chartsdemo';
 import {FileDemo} from './demo/view/filedemo';
 import {UtilsDemo} from './demo/view/utilsdemo';
 import {Documentation} from './demo/view/documentation';
-
+import {Imgmapcomponent} from './demo/view/imgmapcomponent';
 
 
 export const routes: Routes = [
@@ -32,7 +32,7 @@ export const routes: Routes = [
     {path: 'file', component: FileDemo},
     {path: 'utils', component: UtilsDemo},
     {path: 'documentation', component: Documentation},
-
+    {path: 'imgmap', component: Imgmapcomponent},
 ];
 
 export const AppRoutes: ModuleWithProviders = RouterModule.forRoot(routes);

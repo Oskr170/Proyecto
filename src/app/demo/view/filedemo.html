@@ -5,8 +5,9 @@
                 <h1>Subir Archivos</h1>
                 <p-growl [value]="msgs"></p-growl>
 
+                <!--acomodar dir-->
                 <p-fileUpload name="demo[]" url="./upload.php" (onUpload)="onUpload($event)"
-                        multiple="multiple" accept="image/*" maxFileSize="1000000">
+                        multiple="multiple" accept=".pdf" maxFileSize="1000000">
                         <ng-template pTemplate type="content">
                             <ul *ngIf="uploadedFiles.length">
                                 <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
